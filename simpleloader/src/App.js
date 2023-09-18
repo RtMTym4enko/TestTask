@@ -1,10 +1,11 @@
 import { DisplayFact } from './DisplayFact';
+import { OnCenter } from './OnCenter';
 
 function App() {
   return (
-    <div className="App">
-      <DisplayFact />
-    </div>
+      <OnCenter>
+        <DisplayFact />
+      </OnCenter>
   );
 }
 

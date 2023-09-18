@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react"
 import { Button } from "./Button";
 import { ProgressStatus } from "./ProgressStatus";
+import PetsIcon from '@mui/icons-material/Pets';
 
 export function FactLoader({maxAttemptCount, onLoadCallback, onAttemptsExceeded}){
     const [isLoading, setIsLoading] = useState(false);
@@ -33,5 +34,5 @@ export function FactLoader({maxAttemptCount, onLoadCallback, onAttemptsExceeded}
         }
     }, [isLoading, loadData]);
 
-    return isLoading ? <ProgressStatus attemptCount={attemptCount} maxAttemptCount={maxAttemptCount} /> : <Button text="Load" onPressCallback = {() => setIsLoading(true)} />
+    return isLoading ? <ProgressStatus attemptCount={attemptCount} maxAttemptCount={maxAttemptCount} /> : <Button text="Load" icon={<PetsIcon />} onPressCallback = {() => setIsLoading(true)} />
 }
